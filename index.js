@@ -50,7 +50,7 @@ client.once('ready', async () => {
                 .setEmoji('🎫')
         );
         await channel.send({
-            content: '**📂 Ticket Generali**\nPer qualsiasi altra domanda o segnalazione.',
+            content: '**📂 Ticket Generali**\nPer qualsiasi domanda o segnalazione.',
             components: [row]
         });
     }
@@ -64,14 +64,14 @@ client.on('interactionCreate', async (interaction) => {
 
         const subjectInput = new TextInputBuilder()
             .setCustomId('ticket_subject')
-            .setLabel("Motivo del ticket")
-            .setPlaceholder("Descrivi brevemente il motivo")
+            .setLabel("Nome e Cognome")
+            .setPlaceholder("Nome e Cognome")
             .setStyle(TextInputStyle.Short)
             .setRequired(true);
 
         const detailsInput = new TextInputBuilder()
             .setCustomId('ticket_details')
-            .setLabel("Descrizione dettagliata")
+            .setLabel("Descrivi il motivo dell'apertura")
             .setStyle(TextInputStyle.Paragraph)
             .setRequired(true);
 
